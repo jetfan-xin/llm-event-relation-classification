@@ -1,0 +1,4 @@
+# Core evaluation, collection and graph JSON export use only the standard library.
+# Optional: model API client and interactive network HTML export.
+openai>=1.50,<3
+pyvis==0.3.2

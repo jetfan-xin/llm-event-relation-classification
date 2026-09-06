@@ -1,0 +1,215 @@
+{
+  "description": "Read-only inventory of reviewed source materials. Original source locations are relative to the supplied project folder. Git history, virtual environments and bundled third-party libraries are excluded from this inventory.",
+  "source_git_head": "8bb45423110598fba961a1a22459acc301d3d1bb",
+  "sources": [
+    {
+      "path": "Data_collector.py",
+      "bytes": 763,
+      "sha256": "7a2ba71fb37d1e07d0549731fce1a65553b61ff89fa834f91bc42bf821836d5f"
+    },
+    {
+      "path": "Topics Choosing.ipynb",
+      "bytes": 3044,
+      "sha256": "ebc11317969994e5dd2f4022b231b9b0c179d62c47c7042553342e208db2ad43"
+    },
+    {
+      "path": "analyzer.py",
+      "bytes": 1687,
+      "sha256": "f3c881c1225fcd31c211127c019701f74f5d5812244605df84282b783d3aca63"
+    },
+    {
+      "path": "generated_relations_progress.json",
+      "bytes": 1406722,
+      "sha256": "c051c3e151afb0d8d6ab1b583a8b53738e6cb71b3bd5ce73f3d5e1170ea97fa1"
+    },
+    {
+      "path": "semantic-networks/data/generated_relations_final.json",
+      "bytes": 6776785,
+      "sha256": "ffab3a2a230f55f8fac18faab1641508908732e1a4815be15efa0c3f2bca080f"
+    },
+    {
+      "path": "semantic-networks/data/output_wo_example.json",
+      "bytes": 6214639,
+      "sha256": "ce61c1230d73f1f508413e4d74adc956ee987fb2cc5ff138f2fea9dddd5abb36"
+    },
+    {
+      "path": "semantic-networks/data_collector.py",
+      "bytes": 742,
+      "sha256": "2049a15b4dc1660934337027aba1149622bc720be62d8db84cd063df7d7157b3"
+    },
+    {
+      "path": "semantic-networks/evaluator.py",
+      "bytes": 6605,
+      "sha256": "950301f2915367f8bab3e9917a8aea72e91c746fcad6755a7c1d3e0e3d001669"
+    },
+    {
+      "path": "semantic-networks/generator.py",
+      "bytes": 7430,
+      "sha256": "c9512a6402a624f3495483eed1b793276b91fcee70ee9ae03690e6057870a744"
+    },
+    {
+      "path": "semantic-networks/prompt_library.py",
+      "bytes": 4244,
+      "sha256": "0357baca599a232a2d0a1540933f4dfd7b30deb00352c49061387819799bb04a"
+    },
+    {
+      "path": "semantic-networks/result/Evaluation Scores.xlsx",
+      "bytes": 11307,
+      "sha256": "8f0325e68dfa5b4a7289600a7fa809eca607116a7068cd39d66c9e5a06e7ec5f"
+    },
+    {
+      "path": "semantic-networks/result/heatmap.png",
+      "bytes": 312059,
+      "sha256": "d0f01d374f3488ee4df473c577bdb1f64532d7717fb96e554544383197152718"
+    },
+    {
+      "path": "semantic-networks/visualizations/Filtered Semantic Network.html",
+      "bytes": 23789,
+      "sha256": "69d92423fe43f5da0b7f7e4c56c1b325131237db8356ce56a1a6b24107de5bcf"
+    },
+    {
+      "path": "semantic-networks/visualizer.py",
+      "bytes": 11469,
+      "sha256": "5b29a97cc82281a4d129c8c04a0b9fb2187ddb9f902071c282503baad3fea429"
+    },
+    {
+      "path": "semantic-networks.zip",
+      "bytes": 7860577,
+      "sha256": "687968598baa8047970725b07232dcd226a79a66df5cc2d1c7ba6ed0ee60f8f5"
+    },
+    {
+      "path": "semantic-networks_total/Filtered Semantic Network.html",
+      "bytes": 23786,
+      "sha256": "757fcd555933fa3430806f3748481cdda2f855b20f7d6311e49c8ee95bf7bf59"
+    },
+    {
+      "path": "semantic-networks_total/comparator_f1score_heatmap.py",
+      "bytes": 6605,
+      "sha256": "950301f2915367f8bab3e9917a8aea72e91c746fcad6755a7c1d3e0e3d001669"
+    },
+    {
+      "path": "semantic-networks_total/data/enriched_filtered_data.json",
+      "bytes": 2420944,
+      "sha256": "0fd045d47dc571ece704d1c8b56461eb5030a87ccf4340089f898f83a2d56b13"
+    },
+    {
+      "path": "semantic-networks_total/data/filtered_has_subevent.json",
+      "bytes": 2291444,
+      "sha256": "60e8ae4cfdb94a07c2073af983ad54b9a509e36db0e176670673569f7ae4c566"
+    },
+    {
+      "path": "semantic-networks_total/data/generated_relations_final.json",
+      "bytes": 6776785,
+      "sha256": "ffab3a2a230f55f8fac18faab1641508908732e1a4815be15efa0c3f2bca080f"
+    },
+    {
+      "path": "semantic-networks_total/data/generated_relations_progress.json",
+      "bytes": 6779275,
+      "sha256": "3433bdbbf1b077dc1a01695d1c86e04fc5577f5a38f9b5128a0fbf7fa9cb7187"
+    },
+    {
+      "path": "semantic-networks_total/data/output.json",
+      "bytes": 6217499,
+      "sha256": "006ac2a18ff4496508518063784429072ed99b267f04135da91fae9bccc7dba1"
+    },
+    {
+      "path": "semantic-networks_total/data/output_wo_example.json",
+      "bytes": 6214639,
+      "sha256": "ce61c1230d73f1f508413e4d74adc956ee987fb2cc5ff138f2fea9dddd5abb36"
+    },
+    {
+      "path": "semantic-networks_total/data/random_relations.json",
+      "bytes": 55389,
+      "sha256": "0bb6fdf6fa4dee06eeace7f9145ee78fc119985aaf8d14ed4a860de4c5a2ba0b"
+    },
+    {
+      "path": "semantic-networks_total/data_collector.py",
+      "bytes": 742,
+      "sha256": "2049a15b4dc1660934337027aba1149622bc720be62d8db84cd063df7d7157b3"
+    },
+    {
+      "path": "semantic-networks_total/filter.py",
+      "bytes": 845,
+      "sha256": "a3d3246fbd217fe12dcd2d7422ee53d812a296dbbcd71ce0ded42f22f7458c82"
+    },
+    {
+      "path": "semantic-networks_total/generator.py",
+      "bytes": 7430,
+      "sha256": "c9512a6402a624f3495483eed1b793276b91fcee70ee9ae03690e6057870a744"
+    },
+    {
+      "path": "semantic-networks_total/merge.py",
+      "bytes": 1370,
+      "sha256": "04f4273600f151da8be1721fd8c20bdb9a94daa3008fa09c94e254d3d6a6c859"
+    },
+    {
+      "path": "semantic-networks_total/plot.py",
+      "bytes": 1918,
+      "sha256": "33dd9973d20e0f87d66c4d014dd0b1ed095c07169f0f62ced384732e4459e828"
+    },
+    {
+      "path": "semantic-networks_total/prompt_library.py",
+      "bytes": 4244,
+      "sha256": "0357baca599a232a2d0a1540933f4dfd7b30deb00352c49061387819799bb04a"
+    },
+    {
+      "path": "semantic-networks_total/random_filter.py",
+      "bytes": 1450,
+      "sha256": "f0cca65c8cd25867accdb20bd69f870ebde95896d9ddaf93e5fd925601fabf55"
+    },
+    {
+      "path": "semantic-networks_total/result/Evaluation Scores.xlsx",
+      "bytes": 11307,
+      "sha256": "8f0325e68dfa5b4a7289600a7fa809eca607116a7068cd39d66c9e5a06e7ec5f"
+    },
+    {
+      "path": "semantic-networks_total/result/heatmap.png",
+      "bytes": 312059,
+      "sha256": "d0f01d374f3488ee4df473c577bdb1f64532d7717fb96e554544383197152718"
+    },
+    {
+      "path": "semantic-networks_total/visualizations/Filtered Semantic Network.html",
+      "bytes": 71341,
+      "sha256": "44db949554f946f8f744a3084659829c656fb4a9b79db76534590bc745ca3b73"
+    },
+    {
+      "path": "semantic-networks_total/visualizations/K-core Semantic Network(k=2).html",
+      "bytes": 86186,
+      "sha256": "aeb8de6c38d28fc17f77c4b4789669bfc873a76482cae5d0e4227274b7f0883f"
+    },
+    {
+      "path": "semantic-networks_total/visualizations/Original Semantic Network of Connected Events.html",
+      "bytes": 528112,
+      "sha256": "523ad6e0a59f27c39bb49fa6221aea8287e5859de32c44aac7e87aca91f6ec6f"
+    },
+    {
+      "path": "semantic-networks_total/visualizer_all_associated_kcore_simplified.py",
+      "bytes": 11533,
+      "sha256": "25ffd330ee30dd5f955285bf84a51eb1e96913ac6b959b5dc5e9c61809a8555f"
+    },
+    {
+      "path": "semantic-networks_total/visualizer_all_associated_kcore_simplified_generated.py",
+      "bytes": 11834,
+      "sha256": "f1cd7922306e2d636d62e8f4fc85c3975d3d3641a319e7b1eece3228a792bf4c"
+    },
+    {
+      "path": "test.py",
+      "bytes": 443,
+      "sha256": "434808fdbd5e1241822891dd1bc99e0465a613d1a290e85f4138536c870371e7"
+    }
+  ],
+  "published_assets": [
+    {
+      "path": "data/predictions.json",
+      "source": "semantic-networks/data/generated_relations_final.json"
+    },
+    {
+      "path": "data/event_pairs.json",
+      "source": "semantic-networks/data/output_wo_example.json"
+    },
+    {
+      "path": "evidence/historical-confusion-matrix.png",
+      "source": "semantic-networks/result/heatmap.png"
+    }
+  ]
+}
