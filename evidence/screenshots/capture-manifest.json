@@ -1,0 +1,55 @@
+{
+  "method": "Chrome screenshots of the original HTML pages. Original graph data and styling retained; physics stabilized for up to 1000 iterations, then stopped and fitted to the canvas. Layout positions may vary between captures.",
+  "captures": [
+    {
+      "image": "evidence/screenshots/filtered-network.png",
+      "source": "artifacts/original/semantic-networks/visualizations/Filtered Semantic Network.html",
+      "source_sha256": "69d92423fe43f5da0b7f7e4c56c1b325131237db8356ce56a1a6b24107de5bcf",
+      "image_sha256": "ba23b3e6ed1a047519d904b591884573ff2d7b7f9da3075ff43941e109c76ece",
+      "nodes": 69,
+      "edges": 82,
+      "width": 1500,
+      "height": 1500
+    },
+    {
+      "image": "evidence/screenshots/filtered-network-root.png",
+      "source": "artifacts/original/semantic-networks_total/Filtered Semantic Network.html",
+      "source_sha256": "757fcd555933fa3430806f3748481cdda2f855b20f7d6311e49c8ee95bf7bf59",
+      "image_sha256": "b1ae4487f731da37b386f33cb62df8b3a831d7d123076ffd3a19f69c5d38e09f",
+      "nodes": 69,
+      "edges": 82,
+      "width": 1500,
+      "height": 1500
+    },
+    {
+      "image": "evidence/screenshots/filtered-network-expanded.png",
+      "source": "artifacts/original/semantic-networks_total/visualizations/Filtered Semantic Network.html",
+      "source_sha256": "44db949554f946f8f744a3084659829c656fb4a9b79db76534590bc745ca3b73",
+      "image_sha256": "d1c3fed22962cbdd7d89b4d44ca473350e89dae508bfa2a79f287fb0e4364488",
+      "nodes": 194,
+      "edges": 246,
+      "width": 1500,
+      "height": 1500
+    },
+    {
+      "image": "evidence/screenshots/k-core-network.png",
+      "source": "artifacts/original/semantic-networks_total/visualizations/K-core Semantic Network(k=2).html",
+      "source_sha256": "aeb8de6c38d28fc17f77c4b4789669bfc873a76482cae5d0e4227274b7f0883f",
+      "image_sha256": "37faa95b01414fc2c1071f90da614c0401af5863fa26e6c5cc8ef389be2956fb",
+      "nodes": 278,
+      "edges": 353,
+      "width": 1598,
+      "height": 750
+    },
+    {
+      "image": "evidence/screenshots/connected-event-network.png",
+      "source": "artifacts/original/semantic-networks_total/visualizations/Original Semantic Network of Connected Events.html",
+      "source_sha256": "523ad6e0a59f27c39bb49fa6221aea8287e5859de32c44aac7e87aca91f6ec6f",
+      "image_sha256": "fd587d3e33874be98a02df42c058e0ae4b746fb2821de8763ee58d7657524f66",
+      "nodes": 1978,
+      "edges": 2064,
+      "width": 1598,
+      "height": 750
+    }
+  ]
+}

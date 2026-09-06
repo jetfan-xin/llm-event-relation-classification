@@ -43,6 +43,25 @@ Multi-sampling produces a modest improvement. The more useful finding is the err
 
 ## Original experiment outputs
 
+### Semantic-network visualizations
+
+The screenshots below show the saved HTML visualizations rendered in Chrome. The original graph data, colors and styles are retained; the view is fitted to the canvas after layout stabilization. Click an image for its full-resolution PNG.
+
+**Filtered event neighborhood: 69 nodes, 82 edges**
+
+![Filtered semantic network showing event labels and colored directed relations](evidence/screenshots/filtered-network.png)
+
+[Original interactive HTML](artifacts/original/semantic-networks/visualizations/Filtered%20Semantic%20Network.html)
+
+| K-core view, k = 2: 278 nodes, 353 edges | Connected-event overview: 1,978 nodes, 2,064 edges |
+| --- | --- |
+| ![Screenshot of the original k-core semantic network](evidence/screenshots/k-core-network.png) | ![Screenshot of the original connected-event semantic network](evidence/screenshots/connected-event-network.png) |
+| [Interactive HTML](artifacts/original/semantic-networks_total/visualizations/K-core%20Semantic%20Network%28k%3D2%29.html) | [Interactive HTML](artifacts/original/semantic-networks_total/visualizations/Original%20Semantic%20Network%20of%20Connected%20Events.html) |
+
+These are saved views with different scopes and display settings, not separate experiments. Dense overviews show network structure; use the HTML for zooming and individual-node inspection. [All five screenshots and source files](artifacts/README.md#saved-semantic-network-visualizations)
+
+### Evaluation figure
+
 ![Original selected-response confusion matrix](evidence/historical-confusion-matrix.png)
 
 The figure above is the original saved output, not a replacement plot. Its known one-record discrepancy is explained in the [results audit](docs/results.md).

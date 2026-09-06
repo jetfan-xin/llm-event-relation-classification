@@ -48,7 +48,7 @@ def verify():
                     if "vbaProject" in name or name.startswith(("xl/externalLinks/", "xl/embeddings/")):
                         errors.append(str(file.relative_to(ROOT)) + ": active or embedded workbook content")
             continue
-        if file.suffix not in (".py", ".md", ".json", ".txt", ".yml", ".example", ".html", ".js", ".ipynb"):
+        if file.suffix not in (".py", ".md", ".json", ".txt", ".yml", ".example", ".html", ".js", ".mjs", ".ipynb"):
             continue
         text = file.read_text(encoding="utf-8")
         relative = str(file.relative_to(ROOT))

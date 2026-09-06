@@ -21,19 +21,21 @@ The workbook's "One-Time Generation" results use the historical second-response 
 
 ## Saved semantic-network visualizations
 
-| Original HTML snapshot | Embedded nodes | Embedded edges |
-| --- | ---: | ---: |
-| [Working-folder filtered graph](original/semantic-networks/visualizations/Filtered%20Semantic%20Network.html) | 69 | 82 |
-| [Expanded-folder root filtered graph](original/semantic-networks_total/Filtered%20Semantic%20Network.html) | 69 | 82 |
-| [Expanded-folder filtered graph](original/semantic-networks_total/visualizations/Filtered%20Semantic%20Network.html) | 194 | 246 |
-| [K-core graph, k = 2](original/semantic-networks_total/visualizations/K-core%20Semantic%20Network%28k%3D2%29.html) | 278 | 353 |
-| [Original connected-event graph](original/semantic-networks_total/visualizations/Original%20Semantic%20Network%20of%20Connected%20Events.html) | 1,978 | 2,064 |
+| Original HTML snapshot | Embedded nodes | Embedded edges | Browser screenshot |
+| --- | ---: | ---: | --- |
+| [Working-folder filtered graph](original/semantic-networks/visualizations/Filtered%20Semantic%20Network.html) | 69 | 82 | [PNG](../evidence/screenshots/filtered-network.png) |
+| [Expanded-folder root filtered graph](original/semantic-networks_total/Filtered%20Semantic%20Network.html) | 69 | 82 | [PNG](../evidence/screenshots/filtered-network-root.png) |
+| [Expanded-folder filtered graph](original/semantic-networks_total/visualizations/Filtered%20Semantic%20Network.html) | 194 | 246 | [PNG](../evidence/screenshots/filtered-network-expanded.png) |
+| [K-core graph, k = 2](original/semantic-networks_total/visualizations/K-core%20Semantic%20Network%28k%3D2%29.html) | 278 | 353 | [PNG](../evidence/screenshots/k-core-network.png) |
+| [Original connected-event graph](original/semantic-networks_total/visualizations/Original%20Semantic%20Network%20of%20Connected%20Events.html) | 1,978 | 2,064 | [PNG](../evidence/screenshots/connected-event-network.png) |
 
 Counts are read directly from each HTML file's embedded node and edge arrays. These files are distinct saved views, not five independent experiments. Their exact run order and generation settings are not fully recorded. Historical label-based node identifiers can merge concepts that have the same text; the maintained exporter uses concept IDs and can therefore produce different graph sizes.
 
 **How to view:** download or clone the repository, preserve its directory structure, and open an HTML file in a browser. GitHub displays the source rather than executing the visualization. The original pages load pinned vis-network and Bootstrap resources from public CDNs, so an internet connection is required and those CDNs receive ordinary browser requests. The required local Pyvis helper is included at each expected relative path with its [BSD license](../third_party/pyvis-LICENSE_BSD.txt).
 
-The HTML files are byte-identical to the supplied originals. Embedded graph data, local helper links and resource URLs were statically checked; browser rendering and interactive controls have not been verified in this environment. These saved views are separate from the maintained package's optional HTML export.
+The HTML files are byte-identical to the supplied originals. All five pages were rendered in an isolated Chrome session and their actual graph canvases captured, with node/edge counts and absence of runtime exceptions checked. This verifies rendering, not every interactive control. The browser used the original data and styles, stabilized physics for up to 1,000 iterations, stopped movement and fitted the network to its canvas. Layout positions can vary between captures; these PNGs are browser previews of saved HTML, not original seminar-era screenshot files or newly generated model results.
+
+The [capture manifest](../evidence/screenshots/capture-manifest.json) records source and image hashes, dimensions and graph counts. The [capture script](../tools/capture_visualizations.mjs) uses an installed Chrome and Node.js 22 without npm packages or a browser download. Its temporary profile is removed after Chrome exits. These saved views remain separate from the maintained package's optional HTML export.
 
 ## Original analysis scripts
 

@@ -1,6 +1,7 @@
 """Publication integrity checks for the original saved experiment artifacts."""
 
 from html.parser import HTMLParser
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -30,6 +31,22 @@ class Resources(HTMLParser):
 
 
 class ArtifactTests(unittest.TestCase):
+    def test_screenshot_provenance_and_dimensions(self):
+        manifest = json.loads((ROOT / 'evidence/screenshots/capture-manifest.json').read_text())
+        self.assertEqual(len(manifest['captures']), 5)
+        for capture in manifest['captures']:
+            source = (ROOT / capture['source']).read_bytes()
+            png = (ROOT / capture['image']).read_bytes()
+            self.assertEqual(hashlib.sha256(source).hexdigest(), capture['source_sha256'])
+            self.assertEqual(hashlib.sha256(png).hexdigest(), capture['image_sha256'])
+            self.assertEqual(png[:8], b'\x89PNG\r\n\x1a\n')
+            self.assertEqual(int.from_bytes(png[16:20], 'big'), capture['width'])
+            self.assertEqual(int.from_bytes(png[20:24], 'big'), capture['height'])
+            text = source.decode()
+            for name in ('nodes', 'edges'):
+                values = json.loads(re.search(r'\b' + name + r'\s*=\s*new vis.DataSet\((\[.*?\])\);', text, re.S).group(1))
+                self.assertEqual(len(values), capture[name])
+
     def test_all_original_project_code_is_published(self):
         manifest = json.loads((ROOT / 'source-manifest.json').read_text())
         code_sources = {s['path'] for s in manifest['sources'] if Path(s['path']).suffix in ('.py', '.ipynb')}
