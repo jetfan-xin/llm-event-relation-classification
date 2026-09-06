@@ -13,11 +13,13 @@ The [source manifest](../source-manifest.json) records hashes of 39 reviewed fil
 | Source file role | Causes | HasSubevent | HasFirstSubevent | HasLastSubevent | Total |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Original collection | 1,832 | 3,507 | 2,128 | 2,874 | 10,841 |
-| Input after example exclusions | 1,830 | 3,506 | 2,127 | 2,873 | 10,836 |
+| Input after example and self-loop exclusions | 1,830 | 3,506 | 2,127 | 2,873 | 10,836 |
 | Complete progress checkpoint | 1,000 | 1,000 | 1,000 | 1,000 | 4,000 |
 | Final prediction archive | 999 | 1,000 | 1,000 | 1,000 | 3,999 |
 
-The progress checkpoint has one extra `Causes` record, `dry -> dry`. It is absent from the final archive. Its removal explains the count difference, but no deletion rationale is present in the code. Other self-loops remain; the final file should not be described as a completely self-loop-cleaned dataset.
+Comparing input versions identifies four removed example pairs: `lighting a match -> fire`, `attending school -> learn`, `wake up -> open your eyes`, and `take a shower -> dry off`. The fifth removed record is the `dry -> dry` self-loop.
+
+The progress checkpoint also has one extra `Causes` record, `dry -> dry`, absent from the final archive. Its removal explains the count difference, but no deletion rationale is present in the code. Other self-loops remain; the final file should not be described as a completely self-loop-cleaned dataset. Each final relation list matches the corresponding retained input prefix in the same order; the progress file and final file are distinct snapshots, not interchangeable checkpoints.
 
 ## Published data
 

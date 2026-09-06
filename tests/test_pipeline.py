@@ -34,6 +34,15 @@ class EvaluationTests(unittest.TestCase):
     def test_archive_counts(self):
         self.assertEqual({r: len(v) for r, v in self.data.items()}, dict(zip(RELATIONS, (999, 1000, 1000, 1000))))
 
+    def test_every_archive_record_has_three_samples(self):
+        self.assertTrue(all(len(row["generated_relations"]) == 3 for rows in self.data.values() for row in rows))
+
+    def test_predictions_match_input_prefix(self):
+        inputs = read_json(ROOT / "data/event_pairs.json")
+        key = lambda row: (row["start"]["@id"], row["end"]["@id"])
+        for rel, rows in self.data.items():
+            self.assertEqual([key(row) for row in rows], [key(row) for row in inputs[rel][:len(rows)]])
+
     def test_strict_first_does_not_replace_invalid(self):
         self.assertEqual(self.results["first"]["correct"], 2381)
         self.assertEqual(self.results["first"]["invalid_predictions"], 4)
