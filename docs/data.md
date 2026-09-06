@@ -6,14 +6,14 @@ The supplied folder contains a working `semantic-networks` repository, an expand
 
 The collector, generator and prompt library are identical between the two main folders. The evaluator is the same code under a different filename. The final predictions and evaluation-input JSON files are byte-identical. Twelve ordinary files in the ZIP match the corresponding working files; only a Finder metadata file differs. The ZIP is therefore not a separate final implementation.
 
-The [source manifest](../source-manifest.json) records hashes of 39 reviewed files without exposing absolute local paths. It excludes Git internals, virtual environments, bundled visualization libraries and operating-system metadata. The retained Git tip is `8bb4542`; the publication uses a clean history because the supplied history contains embedded credentials and unrelated generated artifacts.
+The [source manifest](../source-manifest.json) records hashes of 40 reviewed files without exposing absolute local paths, including the Pyvis helper needed by the saved HTML pages. It excludes Git internals, virtual environments, unnecessary bundled libraries and operating-system metadata. The retained Git tip is `8bb4542`; the publication uses a clean history because the supplied history contains embedded credentials and unrelated generated artifacts.
 
 ## Dataset versions
 
 | Source file role | Causes | HasSubevent | HasFirstSubevent | HasLastSubevent | Total |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Original collection | 1,832 | 3,507 | 2,128 | 2,874 | 10,841 |
-| Input after example and self-loop exclusions | 1,830 | 3,506 | 2,127 | 2,873 | 10,836 |
+| Original collection | 1,832 | 3,507 | 2,128 | 2,874 | 10,341 |
+| Input after example and self-loop exclusions | 1,830 | 3,506 | 2,127 | 2,873 | 10,336 |
 | Complete progress checkpoint | 1,000 | 1,000 | 1,000 | 1,000 | 4,000 |
 | Final prediction archive | 999 | 1,000 | 1,000 | 1,000 | 3,999 |
 
@@ -23,9 +23,10 @@ The progress checkpoint also has one extra `Causes` record, `dry -> dry`, absent
 
 ## Published data
 
-- [event_pairs.json](../data/event_pairs.json): the 10,836-record input snapshot, copied without changing its data.
+- [event_pairs.json](../data/event_pairs.json): the 10,336-record input snapshot, copied without changing its data.
 - [predictions.json](../data/predictions.json): the 3,999-record final output with three initial responses, relation counts and selected explanations.
 - [Historical confusion matrix](../evidence/historical-confusion-matrix.png): the original saved figure, including the normalization discrepancy explained in the results document.
+- [Original workflow and results catalog](../artifacts/README.md): collection and checkpoint snapshots, filtered and enriched records, the error sample, workbook, five HTML graphs and original analysis scripts.
 
 The collection's stored nodes retain ConceptNet IDs, language and text labels, but the original collector discarded assertion-level license, source and dataset fields. The current collector preserves these fields for fresh runs. The old snapshot is not retroactively assigned missing metadata.
 
@@ -33,8 +34,8 @@ ConceptNet-derived data is distributed with attribution under [CC BY-SA 4.0](htt
 
 ## Publication decisions
 
-The `archive` directory retains five representative scripts, with the embedded key replaced by `xxx`. The maintained package exposes tested entry points rather than requiring users to execute the original hard-coded scripts. Archive scripts are reference material, not the recommended runtime.
+The [pipeline directory](../pipeline/README.md) contains all unique supplied project Python scripts and the exploration notebook, with exact duplicate source locations recorded in the manifest. The embedded key is replaced by `xxx`. The `event_relations` package provides tested entry points and directly imports the original prompt library. Original script behavior and maintained entry points are documented separately.
 
-Not published: the virtual environment, ZIP archive, old Git history, duplicate datasets, provisional 820-record checkpoint, derived error-sampling copies, exploratory notebook, bundled JavaScript libraries, generated CDN-dependent HTML, Excel workbook metadata or unrelated toy graph code. The workbook's relevant numerical results are documented and verified by tests rather than republishing an unexplained external-baseline table.
+Not published: the virtual environment, ZIP archive, old Git history, redundant copies of identical datasets or unnecessary bundled libraries. Early exploratory code is included in `pipeline/exploration` without presenting it as part of the final evaluation. The workbook is published with only its absolute save-path metadata removed; all worksheet contents and formatting are retained. The unverified external-baseline table remains visible as original evidence, with its limitations explicitly documented. HTML snapshots retain their original CDN dependencies, with only the required local Pyvis helper included alongside them.
 
 All original source files remain unchanged. Sanitizing this publication does not revoke a key stored in the original files or old university repository history; any such key still in use should be rotated by its owner.

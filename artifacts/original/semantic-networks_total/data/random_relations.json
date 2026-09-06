@@ -1,0 +1,1238 @@
+{
+    "Causes": [
+        {
+            "start": {
+                "@id": "/c/en/thinking",
+                "@type": "Node",
+                "label": "thinking",
+                "language": "en",
+                "term": "/c/en/thinking"
+            },
+            "end": {
+                "@id": "/c/en/best_way",
+                "@type": "Node",
+                "label": "the best way",
+                "language": "en",
+                "term": "/c/en/best_way"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Considering the best way is a component activity within the broader event of thinking. When one is thinking, they often deliberate on finding the best way to do something."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Thinking typically involves considering different options, and one could be figuring out the best way as a part of the thinking process."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Considering 'the best way' is often part of the process of thinking, it can be seen as a component or specific focus within the broader event of thinking."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Considering 'the best way' is often part of the process of thinking, it can be seen as a component or specific focus within the broader event of thinking."
+            },
+            "text": "The effect of [[thinking]] is [[the best way]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/cooking_meal",
+                "@type": "Node",
+                "label": "cooking a meal",
+                "language": "en",
+                "term": "/c/en/cooking_meal"
+            },
+            "end": {
+                "@id": "/c/en/dinner",
+                "@type": "Node",
+                "label": "dinner",
+                "language": "en",
+                "term": "/c/en/dinner"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Dinner is typically the event where the cooked meal is consumed, making it a part of the broader activity of cooking a meal."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Dinner is often the result or part of the event of cooking a meal, as preparing and consuming dinner typically involves cooking a meal."
+                },
+                {
+                    "Relation": "/r/HasLastSubevent",
+                    "Reason": "Dinner is commonly the final result or the concluding event of cooking a meal, as the meal leads to dinner being served and consumed."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 2,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 1
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Dinner is often the result or part of the event of cooking a meal, as preparing and consuming dinner typically involves cooking a meal."
+            },
+            "text": "The effect of [[cooking a meal]] is [[dinner]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/punishing",
+                "@type": "Node",
+                "label": "punishing someone",
+                "language": "en",
+                "term": "/c/en/punishing"
+            },
+            "end": {
+                "@id": "/c/en/getting_punished",
+                "@type": "Node",
+                "label": "getting punished",
+                "language": "en",
+                "term": "/c/en/getting_punished"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Getting punished is an integral part of the event of punishing someone; it's the main component or subevent of the larger event of punishing."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Getting punished is an integral part of the broader event of punishing someone. The act of punishment involves someone receiving the punishment, making it a subevent."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Getting punished is the specific event that occurs as a part of the broader event of punishing someone."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Getting punished is the specific event that occurs as a part of the broader event of punishing someone."
+            },
+            "text": "Something that might happen as a consequence of [[punishing someone]] is [[getting punished]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/going_on_strike",
+                "@type": "Node",
+                "label": "going on strike",
+                "language": "en",
+                "term": "/c/en/going_on_strike"
+            },
+            "end": {
+                "@id": "/c/en/feet_get_tired",
+                "@type": "Node",
+                "label": "your feet get tired",
+                "language": "en",
+                "term": "/c/en/feet_get_tired"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Getting tired feet is a subevent that can occur during the broader event of going on strike, especially if the strike involves prolonged standing or marching."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Getting tired feet is an event that can occur as a part of the broader activity of going on strike, especially if it involves prolonged standing or marching."
+                },
+                {
+                    "Relation": "/r/HasLastSubevent",
+                    "Reason": "Having tired feet could often be the last part of going on strike, especially if it involves marching or standing for long periods."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 2,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 1
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Getting tired feet is an event that can occur as a part of the broader activity of going on strike, especially if it involves prolonged standing or marching."
+            },
+            "text": "Something that might happen as a consequence of [[going on strike]] is [[your feet get tired]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/taking_phone_call",
+                "@type": "Node",
+                "label": "taking a phone call",
+                "language": "en",
+                "term": "/c/en/taking_phone_call"
+            },
+            "end": {
+                "@id": "/c/en/communication",
+                "@type": "Node",
+                "label": "communication",
+                "language": "en",
+                "term": "/c/en/communication"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Communication is an activity that naturally occurs during the event of taking a phone call."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Communication is an activity that occurs as a part of taking a phone call."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Communication is an activity that occurs as a part of taking a phone call."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Communication is an activity that occurs as a part of taking a phone call."
+            },
+            "text": "The effect of [[taking a phone call]] is [[communication]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/reading_magazine",
+                "@type": "Node",
+                "label": "reading a magazine",
+                "language": "en",
+                "term": "/c/en/reading_magazine"
+            },
+            "end": {
+                "@id": "/c/en/gaining_knowlege",
+                "@type": "Node",
+                "label": "gaining knowlege",
+                "language": "en",
+                "term": "/c/en/gaining_knowlege"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Gaining knowledge is an activity that occurs as a part of reading a magazine."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Gaining knowledge is an activity that can occur as part of the broader event of reading a magazine."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Gaining knowledge is an activity that occurs as a part of reading a magazine."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Gaining knowledge is an activity that occurs as a part of reading a magazine."
+            },
+            "text": "Something that might happen as a consequence of [[reading a magazine]] is [[gaining knowlege]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/thanking",
+                "@type": "Node",
+                "label": "thanking someone",
+                "language": "en",
+                "term": "/c/en/thanking"
+            },
+            "end": {
+                "@id": "/c/en/act_of_politeness",
+                "@type": "Node",
+                "label": "an act of politeness",
+                "language": "en",
+                "term": "/c/en/act_of_politeness"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "An act of politeness is an integral part of the process of thanking someone. Thanking someone typically includes an act of politeness."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Thanking someone is an event, and performing an act of politeness is part of the broader activity of thanking."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Thanking someone is an act that happens as part of showing politeness, where various acts or expressions may collectively express politeness."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Thanking someone is an act that happens as part of showing politeness, where various acts or expressions may collectively express politeness."
+            },
+            "text": "The effect of [[thanking someone]] is [[an act of politeness]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/walking_in_rain",
+                "@type": "Node",
+                "label": "walking in the rain",
+                "language": "en",
+                "term": "/c/en/walking_in_rain"
+            },
+            "end": {
+                "@id": "/c/en/splashes",
+                "@type": "Node",
+                "label": "splashes",
+                "language": "en",
+                "term": "/c/en/splashes"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Splashes happening is a subevent that occurs as a part of walking in the rain. Walking in the rain involves interacting with puddles and water, which leads to splashes."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Splashes are an event that occurs as a subevent of walking in the rain, as the rainwater being displaced by footfalls can create splashes."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Splashes are a part of the experience when walking in the rain, as walking through puddles or raindrops hitting the ground typically results in splashes."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Splashes are a part of the experience when walking in the rain, as walking through puddles or raindrops hitting the ground typically results in splashes."
+            },
+            "text": "Sometimes [[walking in the rain]] causes [[splashes]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/going_to_restaurant",
+                "@type": "Node",
+                "label": "going to a restaurant",
+                "language": "en",
+                "term": "/c/en/going_to_restaurant"
+            },
+            "end": {
+                "@id": "/c/en/spending_money",
+                "@type": "Node",
+                "label": "spending money",
+                "language": "en",
+                "term": "/c/en/spending_money"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Spending money is an activity that occurs as a part of going to a restaurant, as purchasing a meal typically involves a monetary transaction."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Spending money is an activity that occurs as a part of going to a restaurant."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Spending money is an activity that typically occurs as a part of the broader event of going to a restaurant."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Spending money is an activity that typically occurs as a part of the broader event of going to a restaurant."
+            },
+            "text": "Something that might happen as a consequence of [[going to a restaurant]] is [[spending money]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/having_asthma_attack",
+                "@type": "Node",
+                "label": "having an asthma attack",
+                "language": "en",
+                "term": "/c/en/having_asthma_attack"
+            },
+            "end": {
+                "@id": "/c/en/pai_and_difficulty_breathing",
+                "@type": "Node",
+                "label": "pai and difficulty breathing",
+                "language": "en",
+                "term": "/c/en/pai_and_difficulty_breathing"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Pain and difficulty breathing are components or subevents that occur during an asthma attack."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Pain and difficulty breathing are subevents that occur during an asthma attack."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Pain and difficulty breathing often occur as subevents during an asthma attack, as they are common symptoms experienced while the attack is happening."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Pain and difficulty breathing often occur as subevents during an asthma attack, as they are common symptoms experienced while the attack is happening."
+            },
+            "text": "Sometimes [[having an asthma attack]] causes [[pai and difficulty breathing]]"
+        }
+    ],
+    "HasFirstSubevent": [
+        {
+            "start": {
+                "@id": "/c/en/urinate",
+                "@type": "Node",
+                "label": "urinate",
+                "language": "en",
+                "term": "/c/en/urinate"
+            },
+            "end": {
+                "@id": "/c/en/aim",
+                "@type": "Node",
+                "label": "aim",
+                "language": "en",
+                "term": "/c/en/aim"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Aiming is an activity that occurs as a part of the broader event of urinating."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Aiming is an activity that typically occurs as part of the broader process of urinating."
+                },
+                {
+                    "Relation": "/r/HasFirstSubevent",
+                    "Reason": "Aiming is typically the first step in the process of urinating."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 2,
+                "HasFirstSubevent": 1,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Aiming is an activity that occurs as a part of the broader event of urinating."
+            },
+            "text": "The first thing you do when you [[urinate]] is [[aim]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/have_epileptic_fit",
+                "@type": "Node",
+                "label": "have an epileptic fit",
+                "language": "en",
+                "term": "/c/en/have_epileptic_fit"
+            },
+            "end": {
+                "@id": "/c/en/seize",
+                "@type": "Node",
+                "label": "seize",
+                "language": "en",
+                "term": "/c/en/seize"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Seizing is an event that occurs as a part of having an epileptic fit, making it a subevent of the broader event."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Seizing is an action that occurs as part of having an epileptic fit."
+                },
+                {
+                    "Relation": "/r/Causes",
+                    "Reason": "Having an epileptic fit typically causes one to seize, as a seizure is a central event of an epileptic fit."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 1,
+                "HasSubevent": 2,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Seizing is an event that occurs as a part of having an epileptic fit, making it a subevent of the broader event."
+            },
+            "text": "The first thing you do when you [[have an epileptic fit]] is [[seize]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/punish",
+                "@type": "Node",
+                "label": "punish someone",
+                "language": "en",
+                "term": "/c/en/punish"
+            },
+            "end": {
+                "@id": "/c/en/spank",
+                "@type": "Node",
+                "label": "spank them",
+                "language": "en",
+                "term": "/c/en/spank"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Spanking someone is an action that can occur as part of the broader event of punishing someone."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Spanking someone can be a specific action that occurs as a part of the broader event of punishing them."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Spanking is an action that occurs as part of the broader event of punishing someone."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Spanking someone is an action that can occur as part of the broader event of punishing someone."
+            },
+            "text": "The first thing you do when you [[punish someone]] is [[spank them]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/make_shopping_list",
+                "@type": "Node",
+                "label": "make a shopping list",
+                "language": "en",
+                "term": "/c/en/make_shopping_list"
+            },
+            "end": {
+                "@id": "/c/en/establish_priorities",
+                "@type": "Node",
+                "label": "establish priorities",
+                "language": "en",
+                "term": "/c/en/establish_priorities"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Establishing priorities is an activity that occurs as part of making a shopping list, as it involves deciding what items are most important to include."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Establishing priorities is an activity that often occurs as part of making a shopping list, as you typically prioritize items to determine what needs to be bought first or what is most important."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Establishing priorities is an activity that occurs as a part of making a shopping list, as you often prioritize what to buy based on need or importance."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Establishing priorities is an activity that occurs as part of making a shopping list, as it involves deciding what items are most important to include."
+            },
+            "text": "The first thing you do when you [[make a shopping list]] is [[establish priorities]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/remember",
+                "@type": "Node",
+                "label": "remember something",
+                "language": "en",
+                "term": "/c/en/remember"
+            },
+            "end": {
+                "@id": "/c/en/think_about_for_while",
+                "@type": "Node",
+                "label": "think about it for a while",
+                "language": "en",
+                "term": "/c/en/think_about_for_while"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Thinking about something for a while is a subevent of the broader action of remembering something. When you remember something, it often involves thinking about it, analyzing, or contemplating it as part of the process."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Thinking about something for a while is an activity that occurs as a part of remembering something."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Thinking about something for a while is an action that can occur as part of the broader activity of remembering something."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Thinking about something for a while is a subevent of the broader action of remembering something. When you remember something, it often involves thinking about it, analyzing, or contemplating it as part of the process."
+            },
+            "text": "The first thing you do when you [[remember something]] is [[think about it for a while]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/tell_many_people_about",
+                "@type": "Node",
+                "label": "tell many people about something",
+                "language": "en",
+                "term": "/c/en/tell_many_people_about"
+            },
+            "end": {
+                "@id": "/c/en/call_friends",
+                "@type": "Node",
+                "label": "call your friends",
+                "language": "en",
+                "term": "/c/en/call_friends"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Calling your friends is an activity that can occur as a part of the broader event of telling many people about something."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Calling your friends is an activity that can happen as a part of telling many people about something."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Calling your friends is an activity that can occur as a part of telling many people about something."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Calling your friends is an activity that can occur as a part of the broader event of telling many people about something."
+            },
+            "text": "The first thing you do when you [[tell many people about something]] is [[call your friends]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/convict_suspect_for_crime",
+                "@type": "Node",
+                "label": "convict a suspect for a crime",
+                "language": "en",
+                "term": "/c/en/convict_suspect_for_crime"
+            },
+            "end": {
+                "@id": "/c/en/put_handcuffs_on",
+                "@type": "Node",
+                "label": "put handcuffs on him",
+                "language": "en",
+                "term": "/c/en/put_handcuffs_on"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Putting handcuffs on a suspect commonly occurs as part of the process of convicting them for a crime, as it is a subevent related to the legal and logistical aspects following a conviction."
+                },
+                {
+                    "Relation": "/r/Causes",
+                    "Reason": "Convicting a suspect for a crime typically leads to the consequence of putting handcuffs on him as part of the arrest process."
+                },
+                {
+                    "Relation": "/r/HasLastSubevent",
+                    "Reason": "Putting handcuffs on a suspect is typically the final step in the process of convicting them for a crime, as it signifies their formal arrest following conviction."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 1,
+                "HasSubevent": 1,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 1
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Putting handcuffs on a suspect is a subevent that occurs as part of the broader activity of convicting a suspect for a crime."
+            },
+            "text": "The first thing you do when you [[convict a suspect for a crime]] is [[put handcuffs on him]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/read_book",
+                "@type": "Node",
+                "label": "read a book",
+                "language": "en",
+                "term": "/c/en/read_book"
+            },
+            "end": {
+                "@id": "/c/en/imagine_events_in_head",
+                "@type": "Node",
+                "label": "imagine the events in your head",
+                "language": "en",
+                "term": "/c/en/imagine_events_in_head"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Imagining the events in your head is an activity that occurs as part of reading a book."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Imagining the events in your head is part of the process of reading a book as you visualize and interpret the content while reading."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Imagining the events in your head is an activity that occurs as a part of reading a book."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Imagining the events in your head is an activity that occurs as part of reading a book."
+            },
+            "text": "The first thing you do when you [[read a book]] is [[imagine the events in your head]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/have_food",
+                "@type": "Node",
+                "label": "have food",
+                "language": "en",
+                "term": "/c/en/have_food"
+            },
+            "end": {
+                "@id": "/c/en/protect_from_bugs",
+                "@type": "Node",
+                "label": "protect it from bugs",
+                "language": "en",
+                "term": "/c/en/protect_from_bugs"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Protecting food from bugs is a subevent that often occurs when handling or storing food to ensure its safety and quality."
+                },
+                {
+                    "Relation": "/r/HasLastSubevent",
+                    "Reason": "Protecting food from bugs is usually the final step after having food, to ensure it is stored or preserved safely after use."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Protecting food from bugs is an activity that often occurs as part of the broader event of having or storing food to maintain its safety and quality."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 2,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 1
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Protecting food from bugs is a subevent that often occurs when handling or storing food to ensure its safety and quality."
+            },
+            "text": "The first thing you do when you [[have food]] is [[protect it from bugs]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/add_up_numbers",
+                "@type": "Node",
+                "label": "add up numbers",
+                "language": "en",
+                "term": "/c/en/add_up_numbers"
+            },
+            "end": {
+                "@id": "/c/en/summing_two_numbers",
+                "@type": "Node",
+                "label": "summing two numbers",
+                "language": "en",
+                "term": "/c/en/summing_two_numbers"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Summing two numbers is a component of the broader activity of adding up numbers, as adding involves summing individual pairs to reach the total."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Summing two numbers is an activity that occurs as a part of the broader event of adding up numbers."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Summing two numbers is an activity that occurs as part of adding up numbers. It is a component of the broader event of adding up multiple numbers."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Summing two numbers is a component of the broader activity of adding up numbers, as adding involves summing individual pairs to reach the total."
+            },
+            "text": "The first thing you do when you [[add up numbers]] is [[summing two numbers]]"
+        }
+    ],
+    "HasLastSubevent": [
+        {
+            "start": {
+                "@id": "/c/en/have_party",
+                "@type": "Node",
+                "label": "have a party",
+                "language": "en",
+                "term": "/c/en/have_party"
+            },
+            "end": {
+                "@id": "/c/en/accept_congratulations",
+                "@type": "Node",
+                "label": "accept congratulations",
+                "language": "en",
+                "term": "/c/en/accept_congratulations"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Accepting congratulations is an activity that typically occurs as a part of having a party."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Accepting congratulations is an activity that often occurs as a part of having a party, especially when the party is thrown in celebration of an achievement or special occasion."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Accepting congratulations is an activity that typically happens during the event of having a party, as people offer congratulations to celebrate the occasion."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Accepting congratulations is an activity that typically occurs as a part of having a party."
+            },
+            "text": "The last thing you do when you [[have a party]] is [[accept congratulations]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/win_baseball_game",
+                "@type": "Node",
+                "label": "win a baseball game",
+                "language": "en",
+                "term": "/c/en/win_baseball_game"
+            },
+            "end": {
+                "@id": "/c/en/cheer",
+                "@type": "Node",
+                "label": "cheer",
+                "language": "en",
+                "term": "/c/en/cheer"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Cheering is an activity often associated with and occurring as part of winning a baseball game, especially by players or spectators."
+                },
+                {
+                    "Relation": "/r/HasLastSubevent",
+                    "Reason": "Cheering is usually the final activity that occurs once a baseball game is won."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Cheering is an activity that often occurs as part of winning a baseball game, as players and fans celebrate the victory."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 2,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 1
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Cheering is an activity often associated with and occurring as part of winning a baseball game, especially by players or spectators."
+            },
+            "text": "The last thing you do when you [[win a baseball game]] is [[cheer]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/tell_many_people_about",
+                "@type": "Node",
+                "label": "tell many people about something",
+                "language": "en",
+                "term": "/c/en/tell_many_people_about"
+            },
+            "end": {
+                "@id": "/c/en/summarize",
+                "@type": "Node",
+                "label": "summarize",
+                "language": "en",
+                "term": "/c/en/summarize"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Summarizing is an activity that can occur as a part of telling many people about something, often to make the information more digestible and concise."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Summarizing is often a component of telling many people about something, as it involves condensing information to share it more efficiently."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Summarizing is a subevent that occurs when telling many people about something, as you often summarize information to make it easier for many people to understand."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Summarizing is an activity that can occur as a part of telling many people about something, often to make the information more digestible and concise."
+            },
+            "text": "The last thing you do when you [[tell many people about something]] is [[summarize]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/go_into_trance",
+                "@type": "Node",
+                "label": "go into a trance",
+                "language": "en",
+                "term": "/c/en/go_into_trance"
+            },
+            "end": {
+                "@id": "/c/en/lose_consciousness",
+                "@type": "Node",
+                "label": "lose consciousness",
+                "language": "en",
+                "term": "/c/en/lose_consciousness"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Losing consciousness can occur as part of the experience of going into a trance."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Losing consciousness is a subevent that can occur during the process of going into a trance. It is part of the experience, although not necessarily the only or always present subevent."
+                },
+                {
+                    "Relation": "/r/Causes",
+                    "Reason": "Going into a trance typically causes a person to lose consciousness as part of the trance experience."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 1,
+                "HasSubevent": 2,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Losing consciousness can occur as part of the experience of going into a trance."
+            },
+            "text": "The last thing you do when you [[go into a trance]] is [[lose consciousness]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/change_society",
+                "@type": "Node",
+                "label": "change society",
+                "language": "en",
+                "term": "/c/en/change_society"
+            },
+            "end": {
+                "@id": "/c/en/write_book_about",
+                "@type": "Node",
+                "label": "write a book about it",
+                "language": "en",
+                "term": "/c/en/write_book_about"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Writing a book about changing society is an activity that can occur as a part of the broader process or effort to change society."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Writing a book about changing society can be part of the broader event of working to change society, as it helps spread ideas and raise awareness."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Writing a book about changing society can be considered a subevent or activity within the broader context of efforts to change society."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Writing a book about changing society is an activity that can occur as a part of the broader process or effort to change society."
+            },
+            "text": "The last thing you do when you [[change society]] is [[write a book about it]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/eat_in_fast_food_restaurant",
+                "@type": "Node",
+                "label": "eat in a fast food restaurant",
+                "language": "en",
+                "term": "/c/en/eat_in_fast_food_restaurant"
+            },
+            "end": {
+                "@id": "/c/en/take_time",
+                "@type": "Node",
+                "label": "take your time",
+                "language": "en",
+                "term": "/c/en/take_time"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Taking your time can be an activity that occurs while eating in a fast food restaurant, though it is not a typical subevent due to the fast-paced nature of such venues. Given the options, none fit perfectly, but 'take your time' can happen as part of the broader activity of eating there."
+                },
+                {
+                    "Relation": "/r/HasLastSubevent",
+                    "Reason": "Taking your time is often associated with leisurely eating and may signify the conclusion of dining in a fast food restaurant, especially if the focus is on enjoying the meal slowly after rushing through the main eating phase."
+                },
+                {
+                    "Relation": "/r/Causes",
+                    "Reason": "Eating in a fast food restaurant typically does not lead to taking your time as fast food is generally associated with quick service and eating for convenience rather than leisurely dining."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 1,
+                "HasSubevent": 1,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 1
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Taking your time can be a component of eating in a fast food restaurant, even though it is not typically expected in that context. However, it can occur as a part of the eating process depending on the situation."
+            },
+            "text": "The last thing you do when you [[eat in a fast food restaurant]] is [[take your time]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/hang_out_at_bar",
+                "@type": "Node",
+                "label": "hang out at the bar",
+                "language": "en",
+                "term": "/c/en/hang_out_at_bar"
+            },
+            "end": {
+                "@id": "/c/en/drink",
+                "@type": "Node",
+                "label": "drink",
+                "language": "en",
+                "term": "/c/en/drink"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Drinking is a common activity that occurs as a part of hanging out at the bar."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Drinking is an activity that typically occurs as a part of hanging out at the bar."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Drinking is an activity that often occurs as a part of hanging out at the bar."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Drinking is a common activity that occurs as a part of hanging out at the bar."
+            },
+            "text": "The last thing you do when you [[hang out at the bar]] is [[drink]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/urinate",
+                "@type": "Node",
+                "label": "urinate",
+                "language": "en",
+                "term": "/c/en/urinate"
+            },
+            "end": {
+                "@id": "/c/en/eat",
+                "@type": "Node",
+                "label": "eat",
+                "language": "en",
+                "term": "/c/en/eat"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/Causes",
+                    "Reason": "Eating causes a sequence of digestive processes that eventually lead to the need to urinate, as the body processes the fluids consumed."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Eating and urinating are not directly related as causation or sequence events. However, urinating is a bodily function that can occur regularly aside from eating as part of human biological processes but doesn't typically relate in terms of subevents. Hence, none of the predefined relationships strictly apply in a causal manner."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Urination can occur as part of a broader sequence of events when eating, as consuming food and fluids can eventually lead to the need to urinate."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 1,
+                "HasSubevent": 2,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Eating and urinating are not directly related as causation or sequence events. However, urinating is a bodily function that can occur regularly aside from eating as part of human biological processes but doesn't typically relate in terms of subevents. Hence, none of the predefined relationships strictly apply in a causal manner."
+            },
+            "text": "The last thing you do when you [[urinate]] is [[eat]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/bring_in_verdict",
+                "@type": "Node",
+                "label": "bring in a verdict",
+                "language": "en",
+                "term": "/c/en/bring_in_verdict"
+            },
+            "end": {
+                "@id": "/c/en/read_verdict_aloud",
+                "@type": "Node",
+                "label": "read the verdict aloud",
+                "language": "en",
+                "term": "/c/en/read_verdict_aloud"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasLastSubevent",
+                    "Reason": "Reading the verdict aloud is commonly the final step in the process of bringing in a verdict."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Reading the verdict aloud is a subevent that typically occurs during the broader event of bringing in a verdict."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Reading the verdict aloud is an action that typically occurs as a part of the broader event of bringing in a verdict."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 2,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 1
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Reading the verdict aloud is a subevent that typically occurs during the broader event of bringing in a verdict."
+            },
+            "text": "The last thing you do when you [[bring in a verdict]] is [[read the verdict aloud]]"
+        },
+        {
+            "start": {
+                "@id": "/c/en/get_away_with_crime",
+                "@type": "Node",
+                "label": "get away with a crime",
+                "language": "en",
+                "term": "/c/en/get_away_with_crime"
+            },
+            "end": {
+                "@id": "/c/en/never_tell",
+                "@type": "Node",
+                "label": "never tell anyone",
+                "language": "en",
+                "term": "/c/en/never_tell"
+            },
+            "generated_relations": [
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Never telling anyone is a subevent and part of the process of getting away with a crime, as it is a necessary action to avoid detection."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Never telling anyone is a part of getting away with a crime, as keeping it a secret is crucial to avoiding detection."
+                },
+                {
+                    "Relation": "/r/HasSubevent",
+                    "Reason": "Never telling anyone is an action that occurs as part of getting away with a crime, as keeping it a secret is necessary to not get caught."
+                }
+            ],
+            "relation_counts": {
+                "Causes": 0,
+                "HasSubevent": 3,
+                "HasFirstSubevent": 0,
+                "HasLastSubevent": 0
+            },
+            "final_relation": {
+                "Relation": "/r/HasSubevent",
+                "Reason": "Never telling anyone is a subevent and part of the process of getting away with a crime, as it is a necessary action to avoid detection."
+            },
+            "text": "The last thing you do when you [[get away with a crime]] is [[never tell anyone]]"
+        }
+    ]
+}

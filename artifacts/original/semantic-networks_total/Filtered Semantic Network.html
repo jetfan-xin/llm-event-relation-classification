@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 1500px;
+                 height: 1500px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#61646f", "font": {"color": "black", "size": 20}, "id": "sleep", "label": "sleep", "shape": "dot", "size": 66.875}, {"color": "#7c7b78", "font": {"color": "black", "size": 20}, "id": "reading a magazine", "label": "reading a magazine", "shape": "dot", "size": 18.125}, {"color": "#bbad6c", "font": {"color": "black", "size": 20}, "id": "write", "label": "write", "shape": "dot", "size": 26.25}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "have a nervous breakdown", "label": "have a nervous breakdown", "shape": "dot", "size": 18.125}, {"color": "#c8b765", "font": {"color": "black", "size": 20}, "id": "open your mouth", "label": "open your mouth", "shape": "dot", "size": 58.75}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "sneeze", "label": "sneeze", "shape": "dot", "size": 18.125}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "lose consciousness", "label": "lose consciousness", "shape": "dot", "size": 18.125}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "wake up", "label": "wake up", "shape": "dot", "size": 18.125}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "get in the car", "label": "get in the car", "shape": "dot", "size": 10.0}, {"color": "#61646f", "font": {"color": "black", "size": 20}, "id": "think", "label": "think", "shape": "dot", "size": 58.75}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "panic", "label": "panic", "shape": "dot", "size": 10.0}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "have sex", "label": "have sex", "shape": "dot", "size": 10.0}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "bow", "label": "bow", "shape": "dot", "size": 10.0}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "sleeping", "label": "sleeping", "shape": "dot", "size": 18.125}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "introduce yourself", "label": "introduce yourself", "shape": "dot", "size": 10.0}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "boredom", "label": "boredom", "shape": "dot", "size": 10.0}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "graduate", "label": "graduate", "shape": "dot", "size": 18.125}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "turn off the radio", "label": "turn off the radio", "shape": "dot", "size": 10.0}, {"color": "#a59b73", "font": {"color": "black", "size": 20}, "id": "go to an opera", "label": "go to an opera", "shape": "dot", "size": 26.25}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "get a good grade", "label": "get a good grade", "shape": "dot", "size": 18.125}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "take notes", "label": "take notes", "shape": "dot", "size": 10.0}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "celebrate", "label": "celebrate", "shape": "dot", "size": 26.25}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "thinking", "label": "thinking", "shape": "dot", "size": 10.0}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "stop talking", "label": "stop talking", "shape": "dot", "size": 10.0}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "go home", "label": "go home", "shape": "dot", "size": 10.0}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "have an asthma attack", "label": "have an asthma attack", "shape": "dot", "size": 10.0}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "commit to memory", "label": "commit to memory", "shape": "dot", "size": 18.125}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "hear the news", "label": "hear the news", "shape": "dot", "size": 18.125}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "say goodbye", "label": "say goodbye", "shape": "dot", "size": 18.125}, {"color": "#7c7b78", "font": {"color": "black", "size": 20}, "id": "listening to music", "label": "listening to music", "shape": "dot", "size": 18.125}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "cough", "label": "cough", "shape": "dot", "size": 10.0}, {"color": "#a59b73", "font": {"color": "black", "size": 20}, "id": "have fun", "label": "have fun", "shape": "dot", "size": 26.25}, {"color": "#7c7b78", "font": {"color": "black", "size": 20}, "id": "flirt", "label": "flirt", "shape": "dot", "size": 18.125}, {"color": "#7c7b78", "font": {"color": "black", "size": 20}, "id": "pray", "label": "pray", "shape": "dot", "size": 18.125}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "checkmate", "label": "checkmate", "shape": "dot", "size": 10.0}, {"color": "#61646f", "font": {"color": "black", "size": 20}, "id": "go to sleep", "label": "go to sleep", "shape": "dot", "size": 50.625}, {"color": "#666970", "font": {"color": "black", "size": 20}, "id": "go into a trance", "label": "go into a trance", "shape": "dot", "size": 26.25}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "sleep at night", "label": "sleep at night", "shape": "dot", "size": 10.0}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "have a party", "label": "have a party", "shape": "dot", "size": 18.125}, {"color": "#7c7b78", "font": {"color": "black", "size": 20}, "id": "enjoying the day", "label": "enjoying the day", "shape": "dot", "size": 18.125}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "pass your university exams", "label": "pass your university exams", "shape": "dot", "size": 34.375}, {"color": "#747475", "font": {"color": "black", "size": 20}, "id": "close your eyes", "label": "close your eyes", "shape": "dot", "size": 75.0}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "dream", "label": "dream", "shape": "dot", "size": 26.25}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "listen to the music", "label": "listen to the music", "shape": "dot", "size": 10.0}, {"color": "#7c7b78", "font": {"color": "black", "size": 20}, "id": "sing", "label": "sing", "shape": "dot", "size": 18.125}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "exhale", "label": "exhale", "shape": "dot", "size": 10.0}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "attend class", "label": "attend class", "shape": "dot", "size": 18.125}, {"color": "#a59b73", "font": {"color": "black", "size": 20}, "id": "breathe some fresh air", "label": "breathe some fresh air", "shape": "dot", "size": 18.125}, {"color": "#575d6d", "font": {"color": "black", "size": 20}, "id": "hear music", "label": "hear music", "shape": "dot", "size": 26.25}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "relaxation", "label": "relaxation", "shape": "dot", "size": 10.0}, {"color": "#575d6d", "font": {"color": "black", "size": 20}, "id": "go back to work", "label": "go back to work", "shape": "dot", "size": 18.125}, {"color": "#7c7b78", "font": {"color": "black", "size": 20}, "id": "play chess", "label": "play chess", "shape": "dot", "size": 18.125}, {"color": "#7c7b78", "font": {"color": "black", "size": 20}, "id": "snore", "label": "snore", "shape": "dot", "size": 34.375}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "cry", "label": "cry", "shape": "dot", "size": 10.0}, {"color": "#a59b73", "font": {"color": "black", "size": 20}, "id": "talk", "label": "talk", "shape": "dot", "size": 18.125}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "party", "label": "party", "shape": "dot", "size": 18.125}, {"color": "#575d6d", "font": {"color": "black", "size": 20}, "id": "fall asleep", "label": "fall asleep", "shape": "dot", "size": 26.25}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "concentrate", "label": "concentrate", "shape": "dot", "size": 18.125}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "remember", "label": "remember", "shape": "dot", "size": 10.0}, {"color": "#fde737", "font": {"color": "black", "size": 20}, "id": "pick up a pen", "label": "pick up a pen", "shape": "dot", "size": 10.0}, {"color": "#4c546c", "font": {"color": "black", "size": 20}, "id": "go off strike", "label": "go off strike", "shape": "dot", "size": 26.25}, {"color": "#bbad6c", "font": {"color": "black", "size": 20}, "id": "tell a story", "label": "tell a story", "shape": "dot", "size": 26.25}, {"color": "#7c7b78", "font": {"color": "black", "size": 20}, "id": "kiss someone", "label": "kiss someone", "shape": "dot", "size": 18.125}, {"color": "#213b6e", "font": {"color": "black", "size": 20}, "id": "smile", "label": "smile", "shape": "dot", "size": 58.75}, {"color": "#7c7b78", "font": {"color": "black", "size": 20}, "id": "go to a performance", "label": "go to a performance", "shape": "dot", "size": 18.125}, {"color": "#bbad6c", "font": {"color": "black", "size": 20}, "id": "talk to someone", "label": "talk to someone", "shape": "dot", "size": 34.375}, {"color": "#a59b73", "font": {"color": "black", "size": 20}, "id": "answer questions", "label": "answer questions", "shape": "dot", "size": 18.125}, {"color": "#7c7b78", "font": {"color": "black", "size": 20}, "id": "go to bed", "label": "go to bed", "shape": "dot", "size": 18.125}, {"color": "#00224d", "font": {"color": "black", "size": 20}, "id": "walk away", "label": "walk away", "shape": "dot", "size": 10.0}]);
+                  edges = new vis.DataSet([{"arrows": "to", "color": "green", "from": "flirt", "smooth": {"enabled": true}, "to": "smile", "width": 2}, {"arrows": "to", "color": "green", "from": "get a good grade", "smooth": {"enabled": true}, "to": "celebrate", "width": 2}, {"arrows": "to", "color": "green", "from": "pray", "smooth": {"enabled": true}, "to": "concentrate", "width": 2}, {"arrows": "to", "color": "purple", "from": "go into a trance", "smooth": {"enabled": true}, "to": "close your eyes", "width": 2}, {"arrows": "to", "color": "green", "from": "snore", "smooth": {"enabled": true}, "to": "go to sleep", "width": 2}, {"arrows": "to", "color": "purple", "from": "go to a performance", "smooth": {"enabled": true}, "to": "sleep", "width": 2}, {"arrows": "to", "color": "purple", "from": "go to an opera", "smooth": {"enabled": true}, "to": "sleep", "width": 2}, {"arrows": "to", "color": "blue", "from": "have fun", "smooth": {"enabled": true}, "to": "have sex", "width": 2}, {"arrows": "to", "color": "green", "from": "have an asthma attack", "smooth": {"enabled": true}, "to": "sneeze", "width": 2}, {"arrows": "to", "color": "green", "from": "have a nervous breakdown", "smooth": {"enabled": true}, "to": "sleep", "width": 2}, {"arrows": "to", "color": "purple", "from": "pass your university exams", "smooth": {"enabled": true}, "to": "graduate", "width": 2}, {"arrows": "to", "color": "red", "from": "reading a magazine", "smooth": {"enabled": true}, "to": "think", "width": 2}, {"arrows": "to", "color": "blue", "from": "snore", "smooth": {"enabled": true}, "to": "sleep", "width": 2}, {"arrows": "to", "color": "blue", "from": "listening to music", "smooth": {"enabled": true}, "to": "fall asleep", "width": 2}, {"arrows": "to", "color": "green", "from": "go to sleep", "smooth": {"enabled": true}, "to": "pray", "width": 2}, {"arrows": "to", "color": "green", "from": "flirt", "smooth": {"enabled": true}, "to": "introduce yourself", "width": 2}, {"arrows": "to", "color": "green", "from": "breathe some fresh air", "smooth": {"enabled": true}, "to": "open your mouth", "width": 2}, {"arrows": "to", "color": "green", "from": "have a nervous breakdown", "smooth": {"enabled": true}, "to": "cry", "width": 2}, {"arrows": "to", "color": "purple", "from": "talk", "smooth": {"enabled": true}, "to": "exhale", "width": 2}, {"arrows": "to", "color": "purple", "from": "hear the news", "smooth": {"enabled": true}, "to": "panic", "width": 2}, {"arrows": "to", "color": "green", "from": "commit to memory", "smooth": {"enabled": true}, "to": "concentrate", "width": 2}, {"arrows": "to", "color": "purple", "from": "talk to someone", "smooth": {"enabled": true}, "to": "say goodbye", "width": 2}, {"arrows": "to", "color": "purple", "from": "go off strike", "smooth": {"enabled": true}, "to": "sleep", "width": 2}, {"arrows": "to", "color": "blue", "from": "listening to music", "smooth": {"enabled": true}, "to": "close your eyes", "width": 2}, {"arrows": "to", "color": "purple", "from": "go to sleep", "smooth": {"enabled": true}, "to": "lose consciousness", "width": 2}, {"arrows": "to", "color": "green", "from": "have fun", "smooth": {"enabled": true}, "to": "smile", "width": 2}, {"arrows": "to", "color": "purple", "from": "kiss someone", "smooth": {"enabled": true}, "to": "smile", "width": 2}, {"arrows": "to", "color": "purple", "from": "dream", "smooth": {"enabled": true}, "to": "wake up", "width": 2}, {"arrows": "to", "color": "green", "from": "kiss someone", "smooth": {"enabled": true}, "to": "open your mouth", "width": 2}, {"arrows": "to", "color": "purple", "from": "have a party", "smooth": {"enabled": true}, "to": "go to bed", "width": 2}, {"arrows": "to", "color": "green", "from": "answer questions", "smooth": {"enabled": true}, "to": "think", "width": 2}, {"arrows": "to", "color": "green", "from": "pass your university exams", "smooth": {"enabled": true}, "to": "celebrate", "width": 2}, {"arrows": "to", "color": "green", "from": "play chess", "smooth": {"enabled": true}, "to": "think", "width": 2}, {"arrows": "to", "color": "blue", "from": "go to a performance", "smooth": {"enabled": true}, "to": "listen to the music", "width": 2}, {"arrows": "to", "color": "green", "from": "graduate", "smooth": {"enabled": true}, "to": "party", "width": 2}, {"arrows": "to", "color": "green", "from": "get a good grade", "smooth": {"enabled": true}, "to": "smile", "width": 2}, {"arrows": "to", "color": "purple", "from": "hear music", "smooth": {"enabled": true}, "to": "turn off the radio", "width": 2}, {"arrows": "to", "color": "green", "from": "attend class", "smooth": {"enabled": true}, "to": "sleep", "width": 2}, {"arrows": "to", "color": "green", "from": "go into a trance", "smooth": {"enabled": true}, "to": "close your eyes", "width": 2}, {"arrows": "to", "color": "purple", "from": "go off strike", "smooth": {"enabled": true}, "to": "go back to work", "width": 2}, {"arrows": "to", "color": "green", "from": "write", "smooth": {"enabled": true}, "to": "think", "width": 2}, {"arrows": "to", "color": "purple", "from": "go to sleep", "smooth": {"enabled": true}, "to": "close your eyes", "width": 2}, {"arrows": "to", "color": "green", "from": "write", "smooth": {"enabled": true}, "to": "thinking", "width": 2}, {"arrows": "to", "color": "green", "from": "write", "smooth": {"enabled": true}, "to": "pick up a pen", "width": 2}, {"arrows": "to", "color": "green", "from": "talk to someone", "smooth": {"enabled": true}, "to": "open your mouth", "width": 2}, {"arrows": "to", "color": "green", "from": "hear the news", "smooth": {"enabled": true}, "to": "smile", "width": 2}, {"arrows": "to", "color": "red", "from": "enjoying the day", "smooth": {"enabled": true}, "to": "relaxation", "width": 2}, {"arrows": "to", "color": "blue", "from": "talk to someone", "smooth": {"enabled": true}, "to": "think", "width": 2}, {"arrows": "to", "color": "blue", "from": "sing", "smooth": {"enabled": true}, "to": "open your mouth", "width": 2}, {"arrows": "to", "color": "purple", "from": "go to sleep", "smooth": {"enabled": true}, "to": "fall asleep", "width": 2}, {"arrows": "to", "color": "purple", "from": "go to bed", "smooth": {"enabled": true}, "to": "close your eyes", "width": 2}, {"arrows": "to", "color": "green", "from": "tell a story", "smooth": {"enabled": true}, "to": "think", "width": 2}, {"arrows": "to", "color": "green", "from": "go to an opera", "smooth": {"enabled": true}, "to": "get in the car", "width": 2}, {"arrows": "to", "color": "green", "from": "sleep", "smooth": {"enabled": true}, "to": "close your eyes", "width": 2}, {"arrows": "to", "color": "blue", "from": "enjoying the day", "smooth": {"enabled": true}, "to": "smile", "width": 2}, {"arrows": "to", "color": "purple", "from": "sing", "smooth": {"enabled": true}, "to": "bow", "width": 2}, {"arrows": "to", "color": "green", "from": "pass your university exams", "smooth": {"enabled": true}, "to": "smile", "width": 2}, {"arrows": "to", "color": "purple", "from": "breathe some fresh air", "smooth": {"enabled": true}, "to": "cough", "width": 2}, {"arrows": "to", "color": "purple", "from": "tell a story", "smooth": {"enabled": true}, "to": "stop talking", "width": 2}, {"arrows": "to", "color": "purple", "from": "go into a trance", "smooth": {"enabled": true}, "to": "lose consciousness", "width": 2}, {"arrows": "to", "color": "green", "from": "hear music", "smooth": {"enabled": true}, "to": "party", "width": 2}, {"arrows": "to", "color": "blue", "from": "sleep at night", "smooth": {"enabled": true}, "to": "snore", "width": 2}, {"arrows": "to", "color": "blue", "from": "sneeze", "smooth": {"enabled": true}, "to": "close your eyes", "width": 2}, {"arrows": "to", "color": "green", "from": "go off strike", "smooth": {"enabled": true}, "to": "go back to work", "width": 2}, {"arrows": "to", "color": "purple", "from": "sleep", "smooth": {"enabled": true}, "to": "wake up", "width": 2}, {"arrows": "to", "color": "purple", "from": "go to an opera", "smooth": {"enabled": true}, "to": "go home", "width": 2}, {"arrows": "to", "color": "green", "from": "go to sleep", "smooth": {"enabled": true}, "to": "close your eyes", "width": 2}, {"arrows": "to", "color": "red", "from": "sleeping", "smooth": {"enabled": true}, "to": "have fun", "width": 2}, {"arrows": "to", "color": "red", "from": "reading a magazine", "smooth": {"enabled": true}, "to": "boredom", "width": 2}, {"arrows": "to", "color": "green", "from": "answer questions", "smooth": {"enabled": true}, "to": "open your mouth", "width": 2}, {"arrows": "to", "color": "blue", "from": "tell a story", "smooth": {"enabled": true}, "to": "remember", "width": 2}, {"arrows": "to", "color": "green", "from": "talk", "smooth": {"enabled": true}, "to": "open your mouth", "width": 2}, {"arrows": "to", "color": "purple", "from": "play chess", "smooth": {"enabled": true}, "to": "checkmate", "width": 2}, {"arrows": "to", "color": "purple", "from": "commit to memory", "smooth": {"enabled": true}, "to": "think", "width": 2}, {"arrows": "to", "color": "purple", "from": "have a party", "smooth": {"enabled": true}, "to": "say goodbye", "width": 2}, {"arrows": "to", "color": "green", "from": "talk to someone", "smooth": {"enabled": true}, "to": "walk away", "width": 2}, {"arrows": "to", "color": "purple", "from": "hear music", "smooth": {"enabled": true}, "to": "close your eyes", "width": 2}, {"arrows": "to", "color": "purple", "from": "pass your university exams", "smooth": {"enabled": true}, "to": "celebrate", "width": 2}, {"arrows": "to", "color": "purple", "from": "attend class", "smooth": {"enabled": true}, "to": "take notes", "width": 2}, {"arrows": "to", "color": "blue", "from": "sleeping", "smooth": {"enabled": true}, "to": "dream", "width": 2}, {"arrows": "to", "color": "green", "from": "snore", "smooth": {"enabled": true}, "to": "open your mouth", "width": 2}, {"arrows": "to", "color": "green", "from": "dream", "smooth": {"enabled": true}, "to": "fall asleep", "width": 2}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"borderWidth": 2, "color": {"border": "#2B7CE9", "background": "#D2E5FF", "highlight": {"border": "#FFA000", "background": "#FFFACD"}, "hover": {"border": "#A52A2A", "background": "#FFD700"}}, "font": {"color": "#343434", "size": 14, "face": "arial"}}, "edges": {"color": {"color": "#848484", "highlight": "#FF6347", "hover": "#00CED1"}, "smooth": {"enabled": true, "type": "dynamic"}}, "interaction": {"tooltipDelay": 200, "hover": true}, "physics": {"barnesHut": {"gravitationalConstant": -20000, "springLength": 50, "springConstant": 0.5}, "minVelocity": 0.75}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

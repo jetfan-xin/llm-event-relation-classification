@@ -1,5 +1,5 @@
 {
-  "description": "Read-only inventory of reviewed source materials. Original source locations are relative to the supplied project folder. Git history, virtual environments and bundled third-party libraries are excluded from this inventory.",
+  "description": "Read-only inventory of reviewed source materials, with relative locations, source hashes and published-asset mappings. Git internals, virtual environments and unrelated dependency files are excluded; the required Pyvis helper is included.",
   "source_git_head": "8bb45423110598fba961a1a22459acc301d3d1bb",
   "sources": [
     {
@@ -196,6 +196,11 @@
       "path": "test.py",
       "bytes": 443,
       "sha256": "434808fdbd5e1241822891dd1bc99e0465a613d1a290e85f4138536c870371e7"
+    },
+    {
+      "path": "semantic-networks_total/lib/bindings/utils.js",
+      "bytes": 6311,
+      "sha256": "3113c73317c30c99eaafbc782916160ce7d23183a148615da0496643e9560cb0"
     }
   ],
   "published_assets": [
@@ -210,6 +215,138 @@
     {
       "path": "evidence/historical-confusion-matrix.png",
       "source": "semantic-networks/result/heatmap.png"
+    },
+    {
+      "path": "artifacts/original/generated_relations_progress.json",
+      "source": "generated_relations_progress.json"
+    },
+    {
+      "path": "artifacts/original/semantic-networks/lib/bindings/utils.js",
+      "source": "semantic-networks_total/lib/bindings/utils.js"
+    },
+    {
+      "path": "artifacts/original/semantic-networks/result/Evaluation Scores.xlsx",
+      "source": "semantic-networks/result/Evaluation Scores.xlsx",
+      "published_sha256": "482983d2a0990b3ba51c33a09b1dfbb198df5dcb693995ef90194d78c3b6507c",
+      "transformation": "Removed only x15ac:absPath from xl/workbook.xml. All other ZIP member contents, including worksheets, shared strings, styles and document properties, are unchanged."
+    },
+    {
+      "path": "artifacts/original/semantic-networks/visualizations/Filtered Semantic Network.html",
+      "source": "semantic-networks/visualizations/Filtered Semantic Network.html"
+    },
+    {
+      "path": "artifacts/original/semantic-networks_total/Filtered Semantic Network.html",
+      "source": "semantic-networks_total/Filtered Semantic Network.html"
+    },
+    {
+      "path": "artifacts/original/semantic-networks_total/data/enriched_filtered_data.json",
+      "source": "semantic-networks_total/data/enriched_filtered_data.json"
+    },
+    {
+      "path": "artifacts/original/semantic-networks_total/data/filtered_has_subevent.json",
+      "source": "semantic-networks_total/data/filtered_has_subevent.json"
+    },
+    {
+      "path": "artifacts/original/semantic-networks_total/data/generated_relations_progress.json",
+      "source": "semantic-networks_total/data/generated_relations_progress.json"
+    },
+    {
+      "path": "artifacts/original/semantic-networks_total/data/output.json",
+      "source": "semantic-networks_total/data/output.json"
+    },
+    {
+      "path": "artifacts/original/semantic-networks_total/data/random_relations.json",
+      "source": "semantic-networks_total/data/random_relations.json"
+    },
+    {
+      "path": "artifacts/original/semantic-networks_total/lib/bindings/utils.js",
+      "source": "semantic-networks_total/lib/bindings/utils.js"
+    },
+    {
+      "path": "artifacts/original/semantic-networks_total/visualizations/Filtered Semantic Network.html",
+      "source": "semantic-networks_total/visualizations/Filtered Semantic Network.html"
+    },
+    {
+      "path": "artifacts/original/semantic-networks_total/visualizations/K-core Semantic Network(k=2).html",
+      "source": "semantic-networks_total/visualizations/K-core Semantic Network(k=2).html"
+    },
+    {
+      "path": "artifacts/original/semantic-networks_total/visualizations/Original Semantic Network of Connected Events.html",
+      "source": "semantic-networks_total/visualizations/Original Semantic Network of Connected Events.html"
+    },
+    {
+      "path": "pipeline/analyzer.py",
+      "source": "analyzer.py"
+    },
+    {
+      "path": "pipeline/data_collector.py",
+      "source": "semantic-networks/data_collector.py",
+      "equivalent_sources": [
+        "semantic-networks_total/data_collector.py"
+      ]
+    },
+    {
+      "path": "pipeline/evaluator.py",
+      "source": "semantic-networks/evaluator.py",
+      "equivalent_sources": [
+        "semantic-networks_total/comparator_f1score_heatmap.py"
+      ]
+    },
+    {
+      "path": "pipeline/exploration/Data_collector.py",
+      "source": "Data_collector.py"
+    },
+    {
+      "path": "pipeline/exploration/Topics Choosing.ipynb",
+      "source": "Topics Choosing.ipynb"
+    },
+    {
+      "path": "pipeline/exploration/plot.py",
+      "source": "semantic-networks_total/plot.py"
+    },
+    {
+      "path": "pipeline/exploration/test.py",
+      "source": "test.py"
+    },
+    {
+      "path": "pipeline/filter.py",
+      "source": "semantic-networks_total/filter.py"
+    },
+    {
+      "path": "pipeline/generator.py",
+      "source": "semantic-networks/generator.py",
+      "equivalent_sources": [
+        "semantic-networks_total/generator.py"
+      ],
+      "published_sha256": "7732dabf3bfd5499be5af40ece9faaf8de224f419f7eda05e18d8bea12554292",
+      "transformation": "Replaced the embedded API credential with xxx; string quoting and the final newline are normalized. The parsed Python syntax tree otherwise matches the source."
+    },
+    {
+      "path": "pipeline/merge.py",
+      "source": "semantic-networks_total/merge.py"
+    },
+    {
+      "path": "pipeline/prompt_library.py",
+      "source": "semantic-networks/prompt_library.py",
+      "equivalent_sources": [
+        "semantic-networks_total/prompt_library.py"
+      ]
+    },
+    {
+      "path": "pipeline/random_filter.py",
+      "source": "semantic-networks_total/random_filter.py"
+    },
+    {
+      "path": "pipeline/visualizer.py",
+      "source": "semantic-networks/visualizer.py"
+    },
+    {
+      "path": "pipeline/visualizer_all_associated_kcore_simplified.py",
+      "source": "semantic-networks_total/visualizer_all_associated_kcore_simplified.py"
+    },
+    {
+      "path": "pipeline/visualizer_all_associated_kcore_simplified_generated.py",
+      "source": "semantic-networks_total/visualizer_all_associated_kcore_simplified_generated.py"
     }
   ]
 }

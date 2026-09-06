@@ -109,6 +109,7 @@ def filter_top_nodes_by_degree(core_nodes, core_edges, percentile=10):
     # Filter nodes based on the degree threshold
     top_nodes = [node for node, degree in node_degrees.items() if degree >= degree_threshold]
 
+
     #print(f"Top nodes based on degree (percentile={percentile}): {top_nodes}")
 
     return top_nodes, G
@@ -139,7 +140,7 @@ def depth_limited_direct_bfs(graph, start_nodes, depth_limit):
                     for edge_type in edge_data.values():
                         included_edges.add((start, end, edge_type["relation"]))
 
-    return included_nodes, included_edges,
+    return included_nodes, included_edges
 
 def plot_filtered_network(top_nodes, graph, max_distance, title, data):
     G = nx.MultiDiGraph()
@@ -234,17 +235,12 @@ def plot_filtered_network(top_nodes, graph, max_distance, title, data):
             color=color,
             shape="dot",
             size=size,
-            font={"size": 25, "color": "black"}
+            font={"size": 20, "color": "black"}
         )
 
     # Add edges with color-coded relations and smooth curves
     for start, end, relation in included_edges:
-        for rel in data.keys():
-            for example in data[rel]:
-                if example["start"]["label"] == start and example["end"]["label"] == end:
-                    predicted_relation = example.get("final_relation", {}).get("Relation", "/r/Unknown")[3:]
-        color = relation_colors.get(predicted_relation, "black")
-        print(color)
+        color = relation_colors.get(relation, "black")
         # net.add_edge(start, end, label=relation, color=color, smooth={"enabled": True})
         net.add_edge(start, end, color=color, width=2, smooth={"enabled": True})
 
@@ -301,7 +297,8 @@ def plot_filtered_network(top_nodes, graph, max_distance, title, data):
     net.show(f"{title}.html", notebook=False)
 
 
-# Step 1: Find the most common event
+# Step 1: Find the most common events
+# start_events = find_most_common_events(number=10)
 start_events = find_most_common_events(number=1)
 print(start_events)
 # Step 2: Find all connected events and relations
@@ -311,7 +308,12 @@ all_events, all_relations = find_related_events(start_events)
 k = 2
 core_nodes, core_edges = extract_k_core(all_relations, k)
 
-# Step 4: Filter and get nodes with top 1% degree
+# # Step 1: Filter and get nodes with top 5% degree
+# top_nodes, core_graph = filter_top_nodes_by_degree(core_nodes, core_edges, percentile=95)
+# # Step 2: Plot filtered network with 15% depth limit
+# plot_filtered_network(top_nodes, core_graph, max_distance=0.15, title="Filtered Semantic Network", data=data)
+# Step 1: Filter and get nodes with top 5% degree
 top_nodes, core_graph = filter_top_nodes_by_degree(core_nodes, core_edges, percentile=99)
-# Step 5: Plot filtered network with 10% depth limit
+# Step 2: Plot filtered network with 15% depth limit
 plot_filtered_network(top_nodes, core_graph, max_distance=0.1, title="Filtered Semantic Network", data=data)
+

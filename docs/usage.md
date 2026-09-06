@@ -1,5 +1,7 @@
 # Running the project
 
+The complete seminar code is in [pipeline](../pipeline/README.md), including a directly runnable original error analyzer. The commands below use the tested `event_relations` modules; their prompt construction imports the original pipeline prompt library. Source code is not confined to documentation or saved outputs.
+
 ## Offline evaluation
 
 Run from the repository root with Python 3.10 or later:

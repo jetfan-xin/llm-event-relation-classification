@@ -19,3 +19,4 @@ for rel in relations:
 with open('data/output.json', 'a') as f:
     json.dump(rel_dic, f, indent = 4)
 print(count)
+

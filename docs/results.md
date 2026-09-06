@@ -29,6 +29,8 @@ The clearest systematic issue is over-selection of `HasSubevent`: 773 of its 1,3
 
 ## Why the workbook and strict first-response metric differ
 
+Download the [original evaluation workbook](../artifacts/original/semantic-networks/result/Evaluation%20Scores.xlsx) to inspect both worksheets directly. Only absolute save-path metadata was removed; the numerical contents and formatting are unchanged. The [artifact catalog](../artifacts/README.md) also links the original graph views, checkpoints and error-analysis records.
+
 Four first responses use out-of-set labels. The archived evaluator substitutes the second sample in these cases, resulting in two additional correct predictions. Its sheet titled "One-Time Generation" therefore does not report a strictly first-response-only evaluation.
 
 The maintained evaluator exposes this behavior as `historical-first`, while `first` counts all four as invalid predictions and false negatives. Both strategies retain all 3,999 records. The workbook's TP, FP and FN counts match the historical strategy exactly and are encoded as regression tests.

@@ -17,6 +17,20 @@ I implemented data collection, prompt construction and relation generation, eval
 
 The archived experiment requested `gpt-4o` through an OpenAI-compatible third-party endpoint. The saved records do not identify an immutable model snapshot. It was a prompting experiment, not model training or fine-tuning.
 
+## Source code and execution
+
+The repository includes both the complete seminar implementation and the tested command-line modules. The CLI reuses the seminar's prompt library; code, datasets and saved outputs are linked separately so the implementation is easy to inspect.
+
+| Stage | Seminar implementation | Runnable modules |
+| --- | --- | --- |
+| Collect event pairs | [data_collector.py](pipeline/data_collector.py) | [collector.py](event_relations/collector.py) |
+| Construct prompts and classify | [prompt_library.py](pipeline/prompt_library.py), [generator.py](pipeline/generator.py) | [generation.py](event_relations/generation.py), [runner.py](event_relations/runner.py) |
+| Evaluate predictions | [evaluator.py](pipeline/evaluator.py) | [evaluation.py](event_relations/evaluation.py) |
+| Analyze and visualize graphs | [visualizer.py](pipeline/visualizer.py) and [variants](pipeline/README.md) | [graph.py](event_relations/graph.py) |
+| Inspect errors | [filter.py](pipeline/filter.py), [merge.py](pipeline/merge.py), [random_filter.py](pipeline/random_filter.py), [analyzer.py](pipeline/analyzer.py) | [Run the original error analyzer](pipeline/README.md#run-the-project) |
+
+See the [complete source map and compatibility notes](pipeline/README.md) for all implementations, including the exploration notebook. Exact duplicate source files are consolidated, not omitted without a mapping.
+
 ## Results in context
 
 | Evaluation strategy | Accuracy | Macro F1 | Invalid predictions |
@@ -26,6 +40,14 @@ The archived experiment requested `gpt-4o` through an OpenAI-compatible third-pa
 | Multi-sampling selection | 60.24% | 0.6099 | 0 |
 
 Multi-sampling produces a modest improvement. The more useful finding is the error structure: the model often assigns the broad `HasSubevent` label where ConceptNet distinguishes causal, initial or final subevents. These scores measure agreement with the archived ConceptNet labels, not universally correct semantic judgments. [Detailed results and limitations](docs/results.md)
+
+## Original experiment outputs
+
+![Original selected-response confusion matrix](evidence/historical-confusion-matrix.png)
+
+The figure above is the original saved output, not a replacement plot. Its known one-record discrepancy is explained in the [results audit](docs/results.md).
+
+Open the [original workflow and results catalog](artifacts/README.md) to inspect the collection, generation checkpoints, error-analysis outputs and five saved semantic-network views. Start with the [original evaluation workbook](artifacts/original/semantic-networks/result/Evaluation%20Scores.xlsx) or the [connected-event graph HTML](artifacts/original/semantic-networks_total/visualizations/Original%20Semantic%20Network%20of%20Connected%20Events.html). Download the repository and open HTML files locally; GitHub does not run them inline.
 
 ## Try it without an API key
 
@@ -47,6 +69,6 @@ For optional model generation and interactive Pyvis visualization, see [usage](d
 - [Results](docs/results.md): all evaluation strategies and the difference between stored figures and recomputed metrics.
 - [Data and provenance](docs/data.md): dataset sizes, duplicates, source versions and publication decisions.
 - [Usage](docs/usage.md): commands, checkpoint behavior and optional dependencies.
-- [Archived scripts](archive/README.md): reference code with credentials replaced by `xxx`.
+- [Complete seminar source](pipeline/README.md): collection, generation, evaluation, graph variants, error analysis and exploration code; credentials replaced by `xxx`.
 
 This work includes ConceptNet-derived data under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Attribution, team-code ownership and data limitations are described in [rights and attribution](RIGHTS_AND_ATTRIBUTION.md). Some commonsense assertions contain offensive or sensitive language; their inclusion is not an endorsement.

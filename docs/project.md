@@ -24,8 +24,8 @@ The retained implementation history runs from November through January. A small 
 - Python and JSON for the experiment pipeline and result interchange.
 - ConceptNet REST API for event-relation data.
 - OpenAI-compatible Chat Completions client for prompted relation selection.
-- Pandas, NumPy, Matplotlib and Seaborn in the archived evaluation scripts.
-- NetworkX and Pyvis in the archived graph analysis and interactive visualization.
+- Pandas, NumPy, Matplotlib and Seaborn in the seminar evaluation code.
+- NetworkX and Pyvis in the seminar graph analysis and interactive visualization.
 - Standard-library evaluation and graph utilities in the maintained entry points, allowing offline inspection without a large environment.
 
 The project does not use a trained FF-RNN, a retrieval-augmented generation system or a vector database. An FF-RNN comparison appears in the workbook, but its source, split and implementation are not supplied; it is not represented as this project's implemented baseline.

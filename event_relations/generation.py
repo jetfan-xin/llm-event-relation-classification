@@ -4,7 +4,7 @@ from collections import Counter
 import hashlib
 import json
 
-from archive.prompt_library import prompt_rel, example_list, definition_list
+from pipeline.prompt_library import prompt_rel, example_list, definition_list
 from .evaluation import INVALID, RELATIONS, normalize
 
 

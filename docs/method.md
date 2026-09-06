@@ -15,7 +15,7 @@ These definitions follow the [ConceptNet relation documentation](https://github.
 
 ## Archived experiment
 
-The original collector requested up to ten 1,000-edge pages for each relation and retained edges whose start node was English. Its saved input contains 10,841 records before exclusions and 10,836 afterwards: four illustrative event pairs and one `dry -> dry` self-loop are removed. Up to 1,000 records per relation were processed in file order; no random evaluation split or training procedure is recorded.
+The original collector requested up to ten 1,000-edge pages for each relation and retained edges whose start node was English. Its saved input contains 10,341 records before exclusions and 10,336 afterwards: four illustrative event pairs and one `dry -> dry` self-loop are removed. Up to 1,000 records per relation were processed in file order; no random evaluation split or training procedure is recorded.
 
 The prompt combines definitions, one illustrative example per label, the two event labels and a JSON response template. The generator requests three independent responses. It selects the most frequent relation; when three different labels are returned, it makes a further request restricted to the tied candidates. Explanations accompany the predictions but are not independently validated evidence of model reasoning.
 
@@ -37,7 +37,7 @@ These are maintenance changes, not claims that the archived outputs were generat
 
 The archived `Causes` example lists `A=fire` and `B=lighting a match`, while its explanation describes the reverse direction. The maintained `corrected` prompt swaps those example inputs. `--prompt-version historical` preserves the original wording. Neither option claims to recreate the old provider's exact model behavior.
 
-An unused binary-existence prompt in the archive has contradictory examples and an inconsistent output schema. It is not part of the maintained experiment.
+An unused binary-existence prompt in the original prompt library has contradictory examples and an inconsistent output schema. It is not part of the maintained experiment.
 
 ## Graph conventions and fixes
 
